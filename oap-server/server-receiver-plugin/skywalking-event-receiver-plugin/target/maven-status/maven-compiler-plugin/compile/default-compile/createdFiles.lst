@@ -1,0 +1,6 @@
+org/apache/skywalking/oap/server/receiver/event/EventModuleProvider.class
+org/apache/skywalking/oap/server/receiver/event/grpc/EventGrpcServiceHandler.class
+org/apache/skywalking/oap/server/receiver/event/EventModule.class
+org/apache/skywalking/oap/server/receiver/event/rest/EventRestServiceHandler.class
+org/apache/skywalking/oap/server/receiver/event/EventModuleConfig.class
+org/apache/skywalking/oap/server/receiver/event/grpc/EventGrpcServiceHandler$1.class

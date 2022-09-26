@@ -1,0 +1,5 @@
+org/apache/skywalking/oap/server/receiver/profile/provider/handler/ProfileTaskServiceHandler$1.class
+org/apache/skywalking/oap/server/receiver/profile/provider/ProfileModuleProvider.class
+org/apache/skywalking/oap/server/receiver/profile/provider/handler/ProfileTaskServiceHandler.class
+org/apache/skywalking/oap/server/receiver/profile/module/ProfileModule.class
+org/apache/skywalking/oap/server/receiver/profile/provider/handler/ProfileTaskServiceHandlerCompat.class

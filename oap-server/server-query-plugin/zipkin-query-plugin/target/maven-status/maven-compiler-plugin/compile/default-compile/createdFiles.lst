@@ -1,0 +1,5 @@
+org/apache/skywalking/oap/query/zipkin/ZipkinQueryConfig.class
+org/apache/skywalking/oap/query/zipkin/ZipkinQueryModule.class
+org/apache/skywalking/oap/query/zipkin/handler/ZipkinQueryHandler.class
+org/apache/skywalking/oap/query/zipkin/handler/ZipkinQueryExceptionHandler.class
+org/apache/skywalking/oap/query/zipkin/ZipkinQueryProvider.class

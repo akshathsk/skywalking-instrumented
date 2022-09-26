@@ -1,0 +1,5 @@
+org/apache/skywalking/oap/server/receiver/sharing/server/SharingServerModuleProvider.class
+org/apache/skywalking/oap/server/receiver/sharing/server/SharingServerConfig.class
+org/apache/skywalking/oap/server/receiver/sharing/server/ReceiverGRPCHandlerRegister.class
+org/apache/skywalking/oap/server/receiver/sharing/server/ReceiverHTTPHandlerRegister.class
+org/apache/skywalking/oap/server/receiver/sharing/server/SharingServerModule.class

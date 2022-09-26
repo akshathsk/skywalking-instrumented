@@ -1,0 +1,6 @@
+org/apache/skywalking/oap/server/receiver/meter/provider/handler/MeterServiceHandler.class
+org/apache/skywalking/oap/server/receiver/meter/provider/handler/MeterServiceHandler$2.class
+org/apache/skywalking/oap/server/receiver/meter/module/MeterReceiverModule.class
+org/apache/skywalking/oap/server/receiver/meter/provider/MeterReceiverProvider.class
+org/apache/skywalking/oap/server/receiver/meter/provider/handler/MeterServiceHandlerCompat.class
+org/apache/skywalking/oap/server/receiver/meter/provider/handler/MeterServiceHandler$1.class

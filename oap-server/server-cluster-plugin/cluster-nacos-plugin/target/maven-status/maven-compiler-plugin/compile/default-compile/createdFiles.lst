@@ -1,0 +1,3 @@
+org/apache/skywalking/oap/server/cluster/plugin/nacos/NacosCoordinator.class
+org/apache/skywalking/oap/server/cluster/plugin/nacos/ClusterModuleNacosConfig.class
+org/apache/skywalking/oap/server/cluster/plugin/nacos/ClusterModuleNacosProvider.class

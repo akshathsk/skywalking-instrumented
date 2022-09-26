@@ -1,0 +1,5 @@
+org/apache/skywalking/oap/server/receiver/jvm/provider/handler/JVMMetricReportServiceHandlerCompat.class
+org/apache/skywalking/oap/server/receiver/jvm/module/JVMModule.class
+org/apache/skywalking/oap/server/receiver/jvm/provider/JVMModuleProvider.class
+org/apache/skywalking/oap/server/receiver/jvm/provider/JVMOALDefine.class
+org/apache/skywalking/oap/server/receiver/jvm/provider/handler/JVMMetricReportServiceHandler.class

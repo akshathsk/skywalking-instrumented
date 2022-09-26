@@ -1,0 +1,6 @@
+org/apache/skywalking/oap/server/cluster/plugin/etcd/EtcdEndpoint.class
+org/apache/skywalking/oap/server/cluster/plugin/etcd/EtcdEndpoint$Builder.class
+org/apache/skywalking/oap/server/cluster/plugin/etcd/ClusterModuleEtcdProvider.class
+org/apache/skywalking/oap/server/cluster/plugin/etcd/ClusterModuleEtcdConfig.class
+org/apache/skywalking/oap/server/cluster/plugin/etcd/EtcdCoordinator.class
+org/apache/skywalking/oap/server/cluster/plugin/etcd/EtcdCoordinator$1.class

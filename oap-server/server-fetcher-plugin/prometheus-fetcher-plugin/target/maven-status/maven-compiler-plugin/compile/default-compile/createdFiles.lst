@@ -1,0 +1,8 @@
+org/apache/skywalking/oap/server/fetcher/prometheus/http/HTTPClient$HTTPClientBuilder.class
+org/apache/skywalking/oap/server/fetcher/prometheus/provider/PrometheusFetcherConfig.class
+org/apache/skywalking/oap/server/fetcher/prometheus/http/HTTPClientHandler.class
+org/apache/skywalking/oap/server/fetcher/prometheus/module/PrometheusFetcherModule.class
+org/apache/skywalking/oap/server/fetcher/prometheus/provider/PrometheusFetcherProvider$1.class
+org/apache/skywalking/oap/server/fetcher/prometheus/http/HTTPClientInitializer.class
+org/apache/skywalking/oap/server/fetcher/prometheus/provider/PrometheusFetcherProvider.class
+org/apache/skywalking/oap/server/fetcher/prometheus/http/HTTPClient.class

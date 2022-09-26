@@ -1,0 +1,4 @@
+org/apache/skywalking/oap/server/configuration/etcd/EtcdConfigWatcherRegister.class
+org/apache/skywalking/oap/server/configuration/etcd/EtcdConfigException.class
+org/apache/skywalking/oap/server/configuration/etcd/EtcdConfigurationProvider.class
+org/apache/skywalking/oap/server/configuration/etcd/EtcdServerSettings.class

@@ -1,0 +1,5 @@
+org/apache/skywalking/oap/server/cluster/plugin/kubernetes/NamespacedPodListInformer.class
+org/apache/skywalking/oap/server/cluster/plugin/kubernetes/UidEnvSupplier.class
+org/apache/skywalking/oap/server/cluster/plugin/kubernetes/KubernetesCoordinator.class
+org/apache/skywalking/oap/server/cluster/plugin/kubernetes/ClusterModuleKubernetesProvider.class
+org/apache/skywalking/oap/server/cluster/plugin/kubernetes/ClusterModuleKubernetesConfig.class

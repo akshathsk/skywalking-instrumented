@@ -1,0 +1,8 @@
+org/apache/skywalking/oap/server/recevier/configuration/discovery/ConfigurationDiscoveryModule.class
+org/apache/skywalking/oap/server/recevier/configuration/discovery/AgentConfigurationsReader.class
+org/apache/skywalking/oap/server/recevier/configuration/discovery/AgentConfigurationsTable.class
+org/apache/skywalking/oap/server/recevier/configuration/discovery/AgentConfigurationsWatcher.class
+org/apache/skywalking/oap/server/recevier/configuration/discovery/ConfigurationDiscoveryProvider.class
+org/apache/skywalking/oap/server/recevier/configuration/discovery/ConfigurationDiscoveryModuleConfig.class
+org/apache/skywalking/oap/server/recevier/configuration/discovery/handler/grpc/ConfigurationDiscoveryServiceHandler.class
+org/apache/skywalking/oap/server/recevier/configuration/discovery/AgentConfigurations.class

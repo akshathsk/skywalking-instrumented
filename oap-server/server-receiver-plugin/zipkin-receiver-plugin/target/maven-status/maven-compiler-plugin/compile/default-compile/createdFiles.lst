@@ -1,0 +1,9 @@
+org/apache/skywalking/oap/server/receiver/zipkin/handler/ZipkinSpanHTTPHandler.class
+org/apache/skywalking/oap/server/receiver/zipkin/ZipkinReceiverModule.class
+org/apache/skywalking/oap/server/receiver/zipkin/trace/SpanForward.class
+org/apache/skywalking/oap/server/receiver/zipkin/handler/UnzippingBytesRequestConverter.class
+org/apache/skywalking/oap/server/receiver/zipkin/ZipkinReceiverProvider.class
+org/apache/skywalking/oap/server/receiver/zipkin/kafka/KafkaHandler.class
+org/apache/skywalking/oap/server/receiver/zipkin/ZipkinReceiverConfig.class
+org/apache/skywalking/oap/server/receiver/zipkin/handler/ConsumesThrift.class
+org/apache/skywalking/oap/server/receiver/zipkin/handler/SpanEncode.class

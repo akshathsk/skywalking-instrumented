@@ -1,0 +1,2 @@
+org/apache/skywalking/oap/server/cluster/plugin/standalone/StandaloneManager.class
+org/apache/skywalking/oap/server/cluster/plugin/standalone/ClusterModuleStandaloneProvider.class

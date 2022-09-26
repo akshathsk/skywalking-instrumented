@@ -1,0 +1,5 @@
+org/apache/skywalking/oap/server/recevier/log/provider/handler/grpc/LogReportServiceGrpcHandler.class
+org/apache/skywalking/oap/server/recevier/log/provider/handler/grpc/LogReportServiceGrpcHandler$1.class
+org/apache/skywalking/oap/server/recevier/log/provider/handler/rest/LogReportServiceHTTPHandler.class
+org/apache/skywalking/oap/server/recevier/log/provider/LogModuleProvider.class
+org/apache/skywalking/oap/server/recevier/log/module/LogModule.class

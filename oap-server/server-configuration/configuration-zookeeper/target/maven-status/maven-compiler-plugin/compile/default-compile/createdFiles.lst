@@ -1,0 +1,3 @@
+org/apache/skywalking/oap/server/configuration/zookeeper/ZookeeperConfigWatcherRegister.class
+org/apache/skywalking/oap/server/configuration/zookeeper/ZookeeperConfigurationProvider.class
+org/apache/skywalking/oap/server/configuration/zookeeper/ZookeeperServerSettings.class

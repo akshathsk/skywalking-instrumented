@@ -1,0 +1,4 @@
+org/apache/skywalking/oap/server/configuration/configmap/ConfigmapConfigurationProvider.class
+org/apache/skywalking/oap/server/configuration/configmap/ConfigmapConfigurationSettings.class
+org/apache/skywalking/oap/server/configuration/configmap/ConfigmapConfigurationWatcherRegister.class
+org/apache/skywalking/oap/server/configuration/configmap/ConfigurationConfigmapInformer.class

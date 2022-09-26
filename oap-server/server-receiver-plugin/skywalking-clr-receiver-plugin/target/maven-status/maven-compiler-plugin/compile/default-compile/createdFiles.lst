@@ -1,0 +1,6 @@
+org/apache/skywalking/oap/server/receiver/clr/provider/handler/CLRMetricReportServiceHandler.class
+org/apache/skywalking/oap/server/receiver/clr/provider/CLRModuleProvider.class
+org/apache/skywalking/oap/server/receiver/clr/provider/CLROALDefine.class
+org/apache/skywalking/oap/server/receiver/clr/provider/handler/CLRMetricReportServiceHandlerCompat.class
+org/apache/skywalking/oap/server/receiver/clr/module/CLRModule.class
+org/apache/skywalking/oap/server/receiver/clr/provider/handler/CLRSourceDispatcher.class

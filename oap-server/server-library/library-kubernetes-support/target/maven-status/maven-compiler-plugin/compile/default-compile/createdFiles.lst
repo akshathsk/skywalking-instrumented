@@ -1,0 +1,9 @@
+org/apache/skywalking/library/kubernetes/KubernetesServiceWatcher.class
+org/apache/skywalking/library/kubernetes/KubernetesEndpointsListener.class
+org/apache/skywalking/library/kubernetes/KubernetesServiceListener.class
+org/apache/skywalking/library/kubernetes/KubernetesEndpointWatcher.class
+org/apache/skywalking/library/kubernetes/KubernetesClient.class
+org/apache/skywalking/library/kubernetes/KubernetesPodListener.class
+org/apache/skywalking/library/kubernetes/KubernetesNodeListener.class
+org/apache/skywalking/library/kubernetes/KubernetesNodeWatcher.class
+org/apache/skywalking/library/kubernetes/KubernetesPodWatcher.class

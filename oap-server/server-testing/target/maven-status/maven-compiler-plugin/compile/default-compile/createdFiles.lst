@@ -1,0 +1,3 @@
+org/apache/skywalking/oap/server/testing/module/ModuleDefineTesting.class
+org/apache/skywalking/oap/server/testing/module/ModuleProviderTesting.class
+org/apache/skywalking/oap/server/testing/module/ModuleManagerTesting.class

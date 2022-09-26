@@ -1,0 +1,13 @@
+org/apache/skywalking/oap/server/analyzer/agent/kafka/module/KafkaFetcherModule.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/module/KafkaFetcherConfig.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/MeterServiceHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/KafkaFetcherHandlerRegister.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/JsonLogHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/ProfileTaskHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/ServiceManagementHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/KafkaFetcherProvider.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/KafkaHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/AbstractKafkaHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/LogHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/TraceSegmentHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/JVMMetricsHandler.class

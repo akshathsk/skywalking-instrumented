@@ -1,0 +1,6 @@
+org/apache/skywalking/oap/server/receiver/register/provider/handler/v8/rest/ManagementServiceHTTPHandler.class
+org/apache/skywalking/oap/server/receiver/register/provider/handler/v8/grpc/ManagementServiceGRPCHandler.class
+org/apache/skywalking/oap/server/receiver/register/provider/RegisterModuleProvider.class
+org/apache/skywalking/oap/server/receiver/register/provider/handler/v8/grpc/ManagementServiceGrpcHandlerCompat.class
+org/apache/skywalking/oap/server/receiver/register/module/RegisterModule.class
+org/apache/skywalking/oap/server/receiver/register/provider/handler/v8/ManagementServiceHandler.class

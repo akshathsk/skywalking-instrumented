@@ -1,0 +1,4 @@
+org/apache/skywalking/oap/server/storage/plugin/jdbc/tidb/TiDBHistoryDeleteDAO$1.class
+org/apache/skywalking/oap/server/storage/plugin/jdbc/tidb/TiDBStorageProvider.class
+org/apache/skywalking/oap/server/storage/plugin/jdbc/tidb/TiDBStorageConfig.class
+org/apache/skywalking/oap/server/storage/plugin/jdbc/tidb/TiDBHistoryDeleteDAO.class

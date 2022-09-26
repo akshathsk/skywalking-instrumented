@@ -1,0 +1,5 @@
+org/apache/skywalking/oap/server/starter/OAPServerBootstrap.class
+org/apache/skywalking/oap/server/starter/config/ApplicationConfigLoader.class
+org/apache/skywalking/oap/server/starter/OAPServerStartUp.class
+org/apache/skywalking/oap/server/starter/config/ConfigFileNotFoundException.class
+org/apache/skywalking/oap/server/starter/config/ConfigLoader.class

@@ -1,0 +1,4 @@
+package org.apache.skywalking.oap.server.microbench.core.profiling.ebpf.jmh_generated;
+public class EBPFProfilingAnalyzerBenchmark_MedianDatasource_jmhType extends EBPFProfilingAnalyzerBenchmark_MedianDatasource_jmhType_B3 {
+}
+

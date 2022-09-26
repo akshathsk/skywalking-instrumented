@@ -1,0 +1,6 @@
+org/apache/skywalking/oap/server/receiver/ebpf/provider/handler/EBPFProcessServiceHandler.class
+org/apache/skywalking/oap/server/receiver/ebpf/provider/EBPFReceiverProvider.class
+org/apache/skywalking/oap/server/receiver/ebpf/provider/handler/EBPFProfilingServiceHandler$1.class
+org/apache/skywalking/oap/server/receiver/ebpf/provider/handler/EBPFProfilingServiceHandler$2.class
+org/apache/skywalking/oap/server/receiver/ebpf/provider/handler/EBPFProfilingServiceHandler.class
+org/apache/skywalking/oap/server/receiver/ebpf/module/EBPFReceiverModule.class

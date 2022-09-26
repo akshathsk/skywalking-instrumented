@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.19">
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/main/java/org/apache/skywalking/oap/server/configuration/nacos/NacosServerSettings.java">
+</file>
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/main/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigWatcherRegister.java">
+</file>
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/main/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationProvider.java">
+</file>
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestProvider.java">
+</file>
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestModule.java">
+</file>
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/ITNacosConfigurationTest.java">
+</file>
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigWatcherRegisterTest.java">
+</file>
+<file name="/home/sk117/final-project/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/resources/application.yml">
+</file>
+</checkstyle>

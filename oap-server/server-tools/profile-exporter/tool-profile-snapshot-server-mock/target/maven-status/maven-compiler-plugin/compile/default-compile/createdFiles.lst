@@ -1,0 +1,9 @@
+org/apache/skywalking/oap/server/tool/profile/core/mock/MockRemoteClientManager.class
+org/apache/skywalking/oap/server/tool/profile/core/mock/MockSourceReceiver.class
+org/apache/skywalking/oap/server/tool/profile/core/MockCoreModuleConfig.class
+org/apache/skywalking/oap/server/tool/profile/core/MockCoreModuleProvider.class
+org/apache/skywalking/oap/server/tool/profile/core/mock/MockStreamAnnotationListener.class
+org/apache/skywalking/oap/server/tool/profile/core/mock/MockWorkerInstancesService.class
+org/apache/skywalking/oap/server/tool/profile/core/mock/MockGRPCHandlerRegister.class
+org/apache/skywalking/oap/server/tool/profile/core/mock/MockHTTPHandlerRegister.class
+org/apache/skywalking/oap/server/tool/profile/core/mock/MockComponentLibraryCatalogService.class

@@ -1,0 +1,4 @@
+org/apache/skywalking/oap/server/configuration/nacos/NacosServerSettings.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigWatcherRegister$1.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationProvider.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigWatcherRegister.class

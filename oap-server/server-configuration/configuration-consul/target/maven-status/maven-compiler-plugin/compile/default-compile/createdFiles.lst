@@ -1,0 +1,3 @@
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationWatcherRegister.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationCenterSettings.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationProvider.class

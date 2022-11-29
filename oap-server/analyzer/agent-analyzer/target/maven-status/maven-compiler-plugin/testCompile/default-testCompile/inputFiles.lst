@@ -1,0 +1,5 @@
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/analyzer/agent-analyzer/src/test/java/org/apache/skywalking/oap/server/analyzer/provider/meter/process/MeterProcessorTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/analyzer/agent-analyzer/src/test/java/org/apache/skywalking/oap/server/analyzer/provider/trace/UninstrumentedGatewaysConfigTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/analyzer/agent-analyzer/src/test/java/org/apache/skywalking/oap/server/analyzer/provider/trace/parser/listener/strategy/SegmentStatusAnalyzerTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/analyzer/agent-analyzer/src/test/java/org/apache/skywalking/oap/server/analyzer/provider/trace/TraceSamplingPolicyWatcherTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/analyzer/agent-analyzer/src/test/java/org/apache/skywalking/oap/server/analyzer/provider/trace/sampling/SamplingPolicySettingsReaderTest.java

@@ -19,23 +19,27 @@
 package org.apache.skywalking.oap.server.starter.config;
 
 import org.apache.skywalking.oap.server.library.module.ApplicationConfiguration;
+import static org.apache.skywalking.oap.server.library.module.ApplicationConfiguration.PropertiesWrapper;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Properties;
-
+import lombok.extern.slf4j.Slf4j;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
+@Slf4j
 public class ApplicationConfigLoaderTestCase {
 
     private ApplicationConfiguration applicationConfiguration;
 
     @Before
     public void setUp() throws ConfigFileNotFoundException {
+        log.error("System.getProperty1 {}", System.getProperty("SW_STORAGE"));
         System.setProperty("SW_STORAGE", "mysql");
+        log.error("System.getProperty2 {}", System.getProperty("SW_STORAGE"));
         System.setProperty("SW_RECEIVER_ZIPKIN", "default");
         System.setProperty("SW_DATA_SOURCE_PASSWORD", "!AI!3B");
         ApplicationConfigLoader configLoader = new ApplicationConfigLoader();
@@ -44,7 +48,7 @@ public class ApplicationConfigLoaderTestCase {
 
     @Test
     public void testLoadConfig() {
-        Properties providerConfig = applicationConfiguration.getModuleConfiguration("storage")
+        PropertiesWrapper providerConfig = applicationConfiguration.getModuleConfiguration("storage")
                                                             .getProviderConfiguration("mysql");
         assertThat(providerConfig.get("metadataQueryMaxSize"), is(5000));
         assertThat(providerConfig.get("properties"), instanceOf(Properties.class));
@@ -54,7 +58,7 @@ public class ApplicationConfigLoaderTestCase {
 
     @Test
     public void testLoadStringTypeConfig() {
-        Properties providerConfig = applicationConfiguration.getModuleConfiguration("receiver-zipkin")
+        PropertiesWrapper providerConfig = applicationConfiguration.getModuleConfiguration("receiver-zipkin")
                 .getProviderConfiguration("default");
         String host = (String) providerConfig.get("restHost");
         assertEquals("0.0.0.0", host);
@@ -62,7 +66,7 @@ public class ApplicationConfigLoaderTestCase {
 
     @Test
     public void testLoadIntegerTypeConfig() {
-        Properties providerConfig = applicationConfiguration.getModuleConfiguration("receiver-zipkin")
+        PropertiesWrapper providerConfig = applicationConfiguration.getModuleConfiguration("receiver-zipkin")
                 .getProviderConfiguration("default");
         Integer port = (Integer) providerConfig.get("restPort");
         assertEquals(Integer.valueOf(9411), port);
@@ -70,7 +74,7 @@ public class ApplicationConfigLoaderTestCase {
 
     @Test
     public void testLoadBooleanTypeConfig() {
-        Properties providerConfig = applicationConfiguration.getModuleConfiguration("core")
+        PropertiesWrapper providerConfig = applicationConfiguration.getModuleConfiguration("core")
                 .getProviderConfiguration("default");
         Boolean enableDataKeeperExecutor = (Boolean) providerConfig.get("enableDataKeeperExecutor");
         assertEquals(Boolean.TRUE, enableDataKeeperExecutor);
@@ -78,7 +82,7 @@ public class ApplicationConfigLoaderTestCase {
 
     @Test
     public void testLoadSpecialStringTypeConfig() {
-        Properties providerConfig = applicationConfiguration.getModuleConfiguration("storage")
+        PropertiesWrapper providerConfig = applicationConfiguration.getModuleConfiguration("storage")
                 .getProviderConfiguration("mysql");
         Properties properties = (Properties) providerConfig.get("properties");
         String password = (String) properties.get("dataSource.password");

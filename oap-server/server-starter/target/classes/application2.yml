@@ -1,0 +1,3 @@
+receiver-zipkin:
+  default:
+    restPort: 18822

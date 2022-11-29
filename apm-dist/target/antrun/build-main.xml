@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <copy file="/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/apm-dist/target/apache-skywalking-apm-bin.tar.gz" tofile="/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/apm-dist/../dist/apache-skywalking-apm-bin.tar.gz" overwrite="true" />
+  </target>
+</project>

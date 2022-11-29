@@ -1,0 +1,4 @@
+org/apache/skywalking/oap/server/cluster/plugin/zookeeper/ZookeeperCoordinatorTest.class
+org/apache/skywalking/oap/server/cluster/plugin/zookeeper/ITClusterModuleZookeeperProviderFunctionalTest.class
+org/apache/skywalking/oap/server/cluster/plugin/zookeeper/NodeNameBuilderTest.class
+org/apache/skywalking/oap/server/cluster/plugin/zookeeper/ClusterModuleZookeeperProviderTest.class

@@ -1,0 +1,2 @@
+org/apache/skywalking/oap/server/storage/plugin/jdbc/ArrayParamBuilderTestCase.class
+org/apache/skywalking/oap/server/storage/plugin/jdbc/mysql/PreventRedistributionMySQLDriverTest.class

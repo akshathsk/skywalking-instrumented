@@ -28,6 +28,7 @@ public class SamplingPolicySettings {
 
     @Getter
     private SamplingPolicy defaultPolicy;
+    @Getter
     private Map<String, SamplingPolicy> services;
 
     /**

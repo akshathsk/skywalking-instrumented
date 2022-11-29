@@ -1,0 +1,3 @@
+configuration:
+  apollo:
+    period: -2000000000000

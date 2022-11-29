@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.skywalking.oap.server.configuration.zookeeper.it.ITZookeeperConfigurationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 24.024 s <<< FAILURE! - in org.apache.skywalking.oap.server.configuration.zookeeper.it.ITZookeeperConfigurationTest
+shouldReadUpdated4GroupConfig(org.apache.skywalking.oap.server.configuration.zookeeper.it.ITZookeeperConfigurationTest)  Time elapsed: 23.944 s  <<< ERROR!
+org.junit.runners.model.TestTimedOutException: test timed out after 20000 milliseconds
+	at app//org.apache.skywalking.oap.server.configuration.zookeeper.it.ITZookeeperConfigurationTest.shouldReadUpdated4GroupConfig(ITZookeeperConfigurationTest.java:126)
+

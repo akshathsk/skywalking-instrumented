@@ -1,0 +1,3 @@
+configuration:
+  etcd:
+    namespace: /valid/file2

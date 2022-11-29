@@ -20,10 +20,12 @@ package org.apache.skywalking.oap.server.library.module;
 
 import java.util.HashMap;
 import java.util.Properties;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Modulization configurations. The {@link ModuleManager} is going to start, lookup, start modules based on this.
  */
+@Slf4j
 public class ApplicationConfiguration {
     private HashMap<String, ModuleConfiguration> modules = new HashMap<>();
 
@@ -32,6 +34,7 @@ public class ApplicationConfiguration {
     }
 
     public ModuleConfiguration addModule(String moduleName) {
+        log.warn("[CTEST][getModuleConfiguration] ###" + moduleName + "###" + getStackTrace());
         ModuleConfiguration newModule = new ModuleConfiguration();
         modules.put(moduleName, newModule);
         return newModule;
@@ -42,19 +45,30 @@ public class ApplicationConfiguration {
     }
 
     public ModuleConfiguration getModuleConfiguration(String name) {
+        log.warn("[CTEST][getModuleConfiguration] ###" + name + "###" + getStackTrace());
         return modules.get(name);
+    }
+
+    private static String getStackTrace() {
+        String stacktrace = " ";
+        for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
+            stacktrace = stacktrace.concat(element.getClassName() + "\t");
+        }
+        return stacktrace;
     }
 
     /**
      * The configurations about a certain module.
      */
+    @Slf4j
     public static class ModuleConfiguration {
         private HashMap<String, ProviderConfiguration> providers = new HashMap<>();
 
         private ModuleConfiguration() {
         }
 
-        public Properties getProviderConfiguration(String name) {
+        public PropertiesWrapper getProviderConfiguration(String name) {
+            log.warn("[CTEST][getProviderConfiguration] ###" + name + "### providers " + providers.get(name).getProperties() + getStackTrace());
             return providers.get(name).getProperties();
         }
 
@@ -63,24 +77,72 @@ public class ApplicationConfiguration {
         }
 
         public ModuleConfiguration addProviderConfiguration(String name, Properties properties) {
+            log.warn("[CTEST][getProviderConfiguration] ###" + name + "### providers " + properties + getStackTrace());
             ProviderConfiguration newProvider = new ProviderConfiguration(properties);
             providers.put(name, newProvider);
             return this;
         }
     }
 
+    @Slf4j
+    public static class PropertiesWrapper extends Properties {
+        @Override
+        public synchronized Object get(Object key) {
+            log.info("[CTEST][PropertiesWrapper] ###" + key + "### test");
+            return super.get(key);
+        }
+
+        @Override
+        public String getProperty(String key) {
+            log.info("[CTEST][PropertiesWrapper] ###" + key + "###");
+            return super.getProperty(key);
+        }
+
+        @Override
+        public synchronized java.lang.Object put(java.lang.Object key, java.lang.Object value) {
+            log.info("[CTEST][PropertiesWrapper-reset] ###" + key + "### " + "***" + value + "***");
+            return super.put(key, value);
+        }
+    }
+
+    @Slf4j
+    public static class SubPropertiesWrapper extends Properties {
+        @Override
+        public synchronized Object get(Object key) {
+            log.info("[CTEST][SubPropertiesWrapper] ###" + key + "### test");
+            return super.get(key);
+        }
+
+        @Override
+        public String getProperty(String key) {
+            log.info("[CTEST][SubPropertiesWrapper] ###" + key + "###");
+            return super.getProperty(key);
+        }
+
+        @Override
+        public synchronized java.lang.Object put(java.lang.Object key, java.lang.Object value) {
+            log.info("[CTEST][SubPropertiesWrapper-reset] ###" + key + "### " + "***" + value + "***");
+            return super.put(key, value);
+        }
+    }
+
     /**
      * The configuration about a certain provider of a module.
      */
+    @Slf4j
     public static class ProviderConfiguration {
-        private Properties properties;
+        private PropertiesWrapper propertiesWrapper;
 
         ProviderConfiguration(Properties properties) {
-            this.properties = properties;
+            PropertiesWrapper wrapper = new PropertiesWrapper();
+            properties.forEach((k, v) -> {
+                wrapper.put(k, v);
+            });
+            this.propertiesWrapper = wrapper;
         }
 
-        private Properties getProperties() {
-            return properties;
+        private PropertiesWrapper getProperties() {
+            return propertiesWrapper;
         }
     }
 }

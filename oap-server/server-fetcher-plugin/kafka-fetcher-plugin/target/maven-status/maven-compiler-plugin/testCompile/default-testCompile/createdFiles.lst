@@ -1,0 +1,17 @@
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/JVMMetricsHandlerTest.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/mock/MockModuleManager.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/JVMMetricsHandlerTest$2$2.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/SourceReceiverRule.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/JVMMetricsHandlerTest$2$1.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/AbstractKafkaHandlerTest$1.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/ServiceManagementHandlerTest$2.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/KafkaFetcherProviderTest.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/LogHandlerTest.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/ServiceManagementHandlerTest.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/JVMMetricsHandlerTest$1.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/AbstractKafkaHandlerTest$MockKafkaHandler.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/ServiceManagementHandlerTest$1.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/ServiceManagementHandlerTest$2$1.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/mock/MockModuleProvider.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/JVMMetricsHandlerTest$2.class
+org/apache/skywalking/oap/server/analyzer/agent/kafka/provider/handler/AbstractKafkaHandlerTest.class

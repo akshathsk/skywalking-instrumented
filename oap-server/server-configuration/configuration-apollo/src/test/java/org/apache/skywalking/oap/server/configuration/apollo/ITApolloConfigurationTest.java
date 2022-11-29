@@ -23,6 +23,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.time.Duration;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -46,6 +47,10 @@ import org.junit.Test;
 import org.testcontainers.containers.DockerComposeContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
 import org.yaml.snakeyaml.Yaml;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -207,16 +212,29 @@ public class ITApolloConfigurationTest {
 
     @SuppressWarnings("unchecked")
     private void loadConfig(ApplicationConfiguration configuration) throws FileNotFoundException {
+        log.warn("[CTEST][LOAD-PARAM] " + getStackTrace());
+
         Reader applicationReader = ResourceUtils.read("application.yml");
-        Map<String, Map<String, Map<String, ?>>> moduleConfig = yaml.loadAs(applicationReader, Map.class);
+        Map<String, Map<String, Object>> first = yaml.loadAs(applicationReader, Map.class);
+        log.warn("First output" + getAsFormattedJsonString(first));
+        Reader applicationReader2 = ResourceUtils.read("application2.yml");
+        Map<String, Map<String, Object>> second = yaml.loadAs(applicationReader2, Map.class);
+        log.warn("Second output" + getAsFormattedJsonString(second));
+
+        Map<String, Map<String, Object>> moduleConfig = deepMerge(first, second);
+        log.warn("Final output" + getAsFormattedJsonString(moduleConfig));
+
+        log.info("moduleConfig" + moduleConfig);
         if (CollectionUtils.isNotEmpty(moduleConfig)) {
             moduleConfig.forEach((moduleName, providerConfig) -> {
+                log.info("moduleName" + moduleName);
+                log.info("providerConfig" + providerConfig);
                 if (providerConfig.size() > 0) {
                     ApplicationConfiguration.ModuleConfiguration moduleConfiguration = configuration.addModule(moduleName);
                     providerConfig.forEach((name, propertiesConfig) -> {
                         Properties properties = new Properties();
                         if (propertiesConfig != null) {
-                            propertiesConfig.forEach((key, value) -> {
+                            ((Map) propertiesConfig).forEach((key, value) -> {
                                 properties.put(key, value);
                                 final Object replaceValue = yaml.load(PropertyPlaceholderHelper.INSTANCE.replacePlaceholders(value + "", properties));
                                 if (replaceValue != null) {
@@ -229,6 +247,49 @@ public class ITApolloConfigurationTest {
                 }
             });
         }
+    }
+
+    private String getStackTrace() {
+        String stacktrace = " ";
+        for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
+            stacktrace = stacktrace.concat(element.getClassName() + "\t");
+        }
+        return stacktrace;
+    }
+
+    public static String getAsFormattedJsonString(Object object)
+    {
+        ObjectMapper mapper = new ObjectMapper();
+        try
+        {
+            return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(object);
+        }
+        catch (JsonProcessingException e)
+        {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    private static Map deepMerge(Map original, Map newMap) {
+        for (Object key : newMap.keySet()) {
+            if (newMap.get(key) instanceof Map && original.get(key) instanceof Map) {
+                Map originalChild = (Map) original.get(key);
+                Map newChild = (Map) newMap.get(key);
+                original.put(key, deepMerge(originalChild, newChild));
+            } else if (newMap.get(key) instanceof List && original.get(key) instanceof List) {
+                List originalChild = (List) original.get(key);
+                List newChild = (List) newMap.get(key);
+                for (Object each : newChild) {
+                    if (!originalChild.contains(each)) {
+                        originalChild.add(each);
+                    }
+                }
+            } else {
+                original.put(key, newMap.get(key));
+            }
+        }
+        return original;
     }
 
     //for retry

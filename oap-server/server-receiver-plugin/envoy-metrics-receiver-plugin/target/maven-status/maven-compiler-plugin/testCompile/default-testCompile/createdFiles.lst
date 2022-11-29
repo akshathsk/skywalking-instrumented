@@ -1,0 +1,13 @@
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/K8SALSServiceMeshHTTPAnalysisTest$MockK8SAnalysis.class
+org/apache/skywalking/oap/server/receiver/envoy/ClusterManagerMetricsAdapterTest.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/K8SALSServiceMeshHTTPAnalysisTest.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/ServiceNameFormatterTest$1.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/K8SALSServiceMeshHTTPAnalysisTest$1.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/ServiceNameFormatterTest$2$1.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/ServiceNameFormatterTest$Case.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/ServiceNameFormatterTest$2.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/ServiceNameFormatterTest.class
+org/apache/skywalking/oap/server/receiver/envoy/als/k8s/ServiceNameFormatterTest$1$1.class
+org/apache/skywalking/oap/server/receiver/envoy/als/mx/FieldsHelperTest.class
+org/apache/skywalking/oap/server/receiver/envoy/MetricServiceGRPCHandlerTestMain.class
+org/apache/skywalking/oap/server/receiver/envoy/MetricServiceGRPCHandlerTestMain$1.class

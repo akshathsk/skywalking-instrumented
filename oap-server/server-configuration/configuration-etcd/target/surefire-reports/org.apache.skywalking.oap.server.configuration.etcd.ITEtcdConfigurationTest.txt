@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.skywalking.oap.server.configuration.etcd.ITEtcdConfigurationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 23.423 s <<< FAILURE! - in org.apache.skywalking.oap.server.configuration.etcd.ITEtcdConfigurationTest
+shouldReadUpdated(org.apache.skywalking.oap.server.configuration.etcd.ITEtcdConfigurationTest)  Time elapsed: 23.339 s  <<< ERROR!
+org.junit.runners.model.TestTimedOutException: test timed out after 20000 milliseconds
+	at app//org.apache.skywalking.oap.server.configuration.etcd.ITEtcdConfigurationTest.shouldReadUpdated(ITEtcdConfigurationTest.java:100)
+

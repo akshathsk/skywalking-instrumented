@@ -1,0 +1,6 @@
+org/apache/skywalking/oap/server/receiver/zabbix/provider/protocol/ZabbixProtocolHandlerTest.class
+org/apache/skywalking/oap/server/receiver/zabbix/provider/ZabbixBaseTest$1.class
+org/apache/skywalking/oap/server/receiver/zabbix/provider/ZabbixBaseTest$ZabbixProtocolEncoderWrapper.class
+org/apache/skywalking/oap/server/receiver/zabbix/provider/ZabbixBaseTest.class
+org/apache/skywalking/oap/server/receiver/zabbix/provider/ZabbixMetricsTest.class
+org/apache/skywalking/oap/server/receiver/zabbix/provider/ZabbixBaseTest$ZabbixProtocolDecoderWrapper.class

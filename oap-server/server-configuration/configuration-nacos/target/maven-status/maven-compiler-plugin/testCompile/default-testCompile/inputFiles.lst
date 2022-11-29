@@ -1,0 +1,4 @@
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigWatcherRegisterTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestProvider.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestModule.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/src/test/java/org/apache/skywalking/oap/server/configuration/nacos/ITNacosConfigurationTest.java

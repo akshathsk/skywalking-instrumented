@@ -1,0 +1,2 @@
+org/apache/skywalking/oap/server/cluster/plugin/kubernetes/ClusterModuleKubernetesProviderTest.class
+org/apache/skywalking/oap/server/cluster/plugin/kubernetes/KubernetesCoordinatorTest.class

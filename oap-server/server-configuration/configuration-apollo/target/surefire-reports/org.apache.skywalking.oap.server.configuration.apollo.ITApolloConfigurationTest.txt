@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.skywalking.oap.server.configuration.apollo.ITApolloConfigurationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 82.372 s <<< FAILURE! - in org.apache.skywalking.oap.server.configuration.apollo.ITApolloConfigurationTest
+shouldReadUpdated4Group(org.apache.skywalking.oap.server.configuration.apollo.ITApolloConfigurationTest)  Time elapsed: 0.575 s  <<< ERROR!
+java.lang.IllegalArgumentException: Can not set int field org.apache.skywalking.oap.server.configuration.apollo.ApolloConfigurationCenterSettings.period to java.lang.Long
+	at org.apache.skywalking.oap.server.configuration.apollo.ITApolloConfigurationTest.setUp(ITApolloConfigurationTest.java:99)
+

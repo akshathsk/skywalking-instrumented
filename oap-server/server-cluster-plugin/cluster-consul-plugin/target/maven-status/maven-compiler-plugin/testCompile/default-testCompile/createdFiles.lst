@@ -1,0 +1,3 @@
+org/apache/skywalking/oap/server/cluster/plugin/consul/ClusterModuleConsulProviderTest.class
+org/apache/skywalking/oap/server/cluster/plugin/consul/ConsulCoordinatorTest.class
+org/apache/skywalking/oap/server/cluster/plugin/consul/ITClusterModuleConsulProviderFunctionalTest.class

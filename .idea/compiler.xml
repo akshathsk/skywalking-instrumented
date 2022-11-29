@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="telemetry-prometheus" />
+        <module name="cluster-consul-plugin" />
+        <module name="configuration-etcd" />
+        <module name="data-generator" />
+        <module name="microbench" />
+        <module name="library-datacarrier-queue" />
+        <module name="configuration-apollo" />
+        <module name="event-analyzer" />
+        <module name="cluster-kubernetes-plugin" />
+        <module name="skywalking-profile-receiver-plugin" />
+        <module name="zipkin-receiver-plugin" />
+        <module name="library-util" />
+        <module name="skywalking-management-receiver-plugin" />
+        <module name="cluster-zookeeper-plugin" />
+        <module name="skywalking-ebpf-receiver-plugin" />
+        <module name="log-analyzer" />
+        <module name="oal-grammar" />
+        <module name="skywalking-jvm-receiver-plugin" />
+        <module name="library-module" />
+        <module name="apm-network" />
+        <module name="receiver-proto" />
+        <module name="server-testing" />
+        <module name="configuration-k8s-configmap" />
+        <module name="storage-banyandb-plugin" />
+        <module name="skywalking-meter-receiver-plugin" />
+        <module name="storage-jdbc-hikaricp-plugin" />
+        <module name="tool-profile-snapshot-server-mock" />
+        <module name="skywalking-log-recevier-plugin" />
+        <module name="otel-receiver-plugin" />
+        <module name="configuration-zookeeper" />
+        <module name="agent-analyzer" />
+        <module name="apm-webapp" />
+        <module name="server-health-checker" />
+        <module name="configuration-api" />
+        <module name="cluster-etcd-plugin" />
+        <module name="skywalking-mesh-receiver-plugin" />
+        <module name="envoy-metrics-receiver-plugin" />
+        <module name="cluster-standalone-plugin" />
+        <module name="cluster-nacos-plugin" />
+        <module name="storage-tidb-plugin" />
+        <module name="skywalking-zabbix-receiver-plugin" />
+        <module name="skywalking-event-receiver-plugin" />
+        <module name="library-server" />
+        <module name="server-starter" />
+        <module name="configuration-discovery-receiver-plugin" />
+        <module name="exporter" />
+        <module name="configuration-nacos" />
+        <module name="prometheus-fetcher-plugin" />
+        <module name="skywalking-sharing-server-plugin" />
+        <module name="skywalking-clr-receiver-plugin" />
+        <module name="grpc-configuration-sync" />
+        <module name="tool-profile-snapshot-bootstrap" />
+        <module name="zipkin-query-plugin" />
+        <module name="configuration-consul" />
+        <module name="kafka-fetcher-plugin" />
+        <module name="oal-rt" />
+        <module name="library-kubernetes-support" />
+        <module name="server-core" />
+        <module name="storage-elasticsearch-plugin" />
+        <module name="meter-analyzer" />
+        <module name="skywalking-browser-receiver-plugin" />
+        <module name="library-elasticsearch-client" />
+        <module name="library-client" />
+        <module name="tool-profile-snapshot-exporter" />
+        <module name="server-alarm-plugin" />
+        <module name="telemetry-api" />
+        <module name="skywalking-trace-receiver-plugin" />
+        <module name="query-graphql-plugin" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

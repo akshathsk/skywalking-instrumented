@@ -1,0 +1,2 @@
+org/apache/skywalking/oap/server/cluster/plugin/etcd/ITClusterModuleEtcdProviderFunctionalTest.class
+org/apache/skywalking/oap/server/cluster/plugin/etcd/ITClusterEtcdPluginTest.class

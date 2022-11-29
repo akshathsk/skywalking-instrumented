@@ -1,0 +1,5 @@
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-consul/src/test/java/org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationWatcherRegisterTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-consul/src/test/java/org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationTestModule.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-consul/src/test/java/org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationProviderTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-consul/src/test/java/org/apache/skywalking/oap/server/configuration/consul/ITConsulConfigurationTest.java
+/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-consul/src/test/java/org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationTestProvider.java

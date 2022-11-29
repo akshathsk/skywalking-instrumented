@@ -1,0 +1,33 @@
+# Created at 2022-11-28T22:38:35.036
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2022-11-28T22:38:35.038
+Unexpected IOException with stream: 2022-11-28 22:38:35,030 pool-1-thread-1 DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false
+
+
+# Created at 2022-11-28T22:38:35.051
+Unexpected IOException with stream: 2022-11-28 22:38:35,051 pool-1-thread-1 DEBUG OutputStream closed
+
+
+# Created at 2022-11-28T22:38:35.052
+Unexpected IOException with stream: 2022-11-28 22:38:35,051 pool-1-thread-1 DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false, all resources released: true
+
+
+# Created at 2022-11-28T22:38:35.052
+Unexpected IOException with stream: 2022-11-28 22:38:35,052 pool-1-thread-1 DEBUG Appender Console stopped with status true
+
+
+# Created at 2022-11-28T22:38:35.053
+Unexpected IOException with stream: 2022-11-28 22:38:35,052 pool-1-thread-1 DEBUG Stopped XmlConfiguration[location=/home/sk117/final-project/copy/apache-skywalking-apm-9.2.0/oap-server/server-configuration/configuration-nacos/target/test-classes/log4j2.xml] OK
+
+
+# Created at 2022-11-28T22:38:35.053
+Unexpected IOException with stream: 2022-11-28 22:38:35,053 pool-1-thread-1 DEBUG Stopped LoggerContext[name=55054057, org.apache.logging.log4j.core.LoggerContext@691939c9] with status true
+
+

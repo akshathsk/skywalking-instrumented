@@ -18,19 +18,23 @@
 
 package org.apache.skywalking.oap.server.starter.config;
 
-import java.io.FileNotFoundException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.skywalking.oap.server.library.util.PropertyPlaceholderHelper;
 import org.apache.skywalking.oap.server.library.module.ApplicationConfiguration;
+import static org.apache.skywalking.oap.server.library.module.ApplicationConfiguration.PropertiesWrapper;
+import static org.apache.skywalking.oap.server.library.module.ApplicationConfiguration.SubPropertiesWrapper;
 import org.apache.skywalking.oap.server.library.module.ProviderNotFoundException;
 import org.apache.skywalking.oap.server.library.util.CollectionUtils;
 import org.apache.skywalking.oap.server.library.util.ResourceUtils;
 import org.yaml.snakeyaml.Yaml;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Initialize collector settings with following sources. Use application.yml as primary setting, and fix missing setting
@@ -56,9 +60,19 @@ public class ApplicationConfigLoader implements ConfigLoader<ApplicationConfigur
     @SuppressWarnings("unchecked")
     private void loadConfig(ApplicationConfiguration configuration) throws ConfigFileNotFoundException {
         try {
+            log.warn("[CTEST][LOAD-PARAM] " + getStackTrace());
             Reader applicationReader = ResourceUtils.read("application.yml");
-            Map<String, Map<String, Object>> moduleConfig = yaml.loadAs(applicationReader, Map.class);
+            Map<String, Map<String, Object>> first = yaml.loadAs(applicationReader, Map.class);
+            log.warn("First output" + getAsFormattedJsonString(first));
+            Reader applicationReader2 = ResourceUtils.read("application2.yml");
+            Map<String, Map<String, Object>> second = yaml.loadAs(applicationReader2, Map.class);
+            log.warn("Second output" + getAsFormattedJsonString(second));
+
+            Map<String, Map<String, Object>> moduleConfig = deepMerge(first, second);
+            log.warn("Final output" + getAsFormattedJsonString(moduleConfig));
+
             if (CollectionUtils.isNotEmpty(moduleConfig)) {
+                log.warn("[CTEST][CONFIG-PARAM] " + moduleConfig);
                 selectConfig(moduleConfig);
                 moduleConfig.forEach((moduleName, providerConfig) -> {
                     if (providerConfig.size() > 0) {
@@ -80,7 +94,11 @@ public class ApplicationConfigLoader implements ConfigLoader<ApplicationConfigur
                                             subProperties.put(key, value);
                                             replacePropertyAndLog(key, value, subProperties, providerName);
                                         });
-                                        properties.put(propertyName, subProperties);
+                                        SubPropertiesWrapper subPropertiesWrapper = new SubPropertiesWrapper();
+                                        subProperties.forEach((k, v) -> {
+                                            subPropertiesWrapper.put(k, v);
+                                        });
+                                        properties.put(propertyName, subPropertiesWrapper);
                                     } else {
                                         properties.put(propertyName, propertyValue);
                                         replacePropertyAndLog(propertyName, propertyValue, properties, providerName);
@@ -97,9 +115,52 @@ public class ApplicationConfigLoader implements ConfigLoader<ApplicationConfigur
                     }
                 });
             }
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             throw new ConfigFileNotFoundException(e.getMessage(), e);
         }
+    }
+
+    private static Map deepMerge(Map original, Map newMap) {
+        for (Object key : newMap.keySet()) {
+            if (newMap.get(key) instanceof Map && original.get(key) instanceof Map) {
+                Map originalChild = (Map) original.get(key);
+                Map newChild = (Map) newMap.get(key);
+                original.put(key, deepMerge(originalChild, newChild));
+            } else if (newMap.get(key) instanceof List && original.get(key) instanceof List) {
+                List originalChild = (List) original.get(key);
+                List newChild = (List) newMap.get(key);
+                for (Object each : newChild) {
+                    if (!originalChild.contains(each)) {
+                        originalChild.add(each);
+                    }
+                }
+            } else {
+                original.put(key, newMap.get(key));
+            }
+        }
+        return original;
+    }
+
+    public static String getAsFormattedJsonString(Object object)
+    {
+        ObjectMapper mapper = new ObjectMapper();
+        try
+        {
+            return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(object);
+        }
+        catch (JsonProcessingException e)
+        {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    private String getStackTrace() {
+        String stacktrace = " ";
+        for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
+            stacktrace = stacktrace.concat(element.getClassName() + "\t");
+        }
+        return stacktrace;
     }
 
     private void replacePropertyAndLog(final Object propertyName, final Object propertyValue, final Properties target,
@@ -200,7 +261,7 @@ public class ApplicationConfigLoader implements ConfigLoader<ApplicationConfigur
         if (!moduleConfiguration.has(providerName)) {
             return;
         }
-        Properties providerSettings = moduleConfiguration.getProviderConfiguration(providerName);
+        PropertiesWrapper providerSettings = moduleConfiguration.getProviderConfiguration(providerName);
         if (!providerSettings.containsKey(settingKey)) {
             return;
         }

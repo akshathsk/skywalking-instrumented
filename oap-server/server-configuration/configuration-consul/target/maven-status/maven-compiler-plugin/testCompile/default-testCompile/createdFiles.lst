@@ -1,0 +1,8 @@
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationWatcherRegisterTest.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationTestProvider$2.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationProviderTest.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationTestProvider$3.class
+org/apache/skywalking/oap/server/configuration/consul/ITConsulConfigurationTest.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationTestProvider.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationTestProvider$1.class
+org/apache/skywalking/oap/server/configuration/consul/ConsulConfigurationTestModule.class

@@ -43,7 +43,32 @@ public class TraceSamplingPolicyWatcher extends ConfigChangeWatcher {
     public TraceSamplingPolicyWatcher(AnalyzerModuleConfig moduleConfig, ModuleProvider provider) {
         super(AnalyzerModule.NAME, provider, "traceSamplingPolicy");
         this.defaultSamplingPolicySettings = parseFromFile(moduleConfig.getTraceSamplingPolicySettingsFile());
+        log.info("[CTest SETTINGS MAP] " + defaultSamplingPolicySettings);
+
+        SamplingPolicySettings overrides = parseFromFile("trace-sampling-policy-settings2.yml");
+        log.info("[CTest SETTINGS MAP OVERRIDES] " + overrides);
+
+        overrideSamplingPolicySettings(overrides);
+        log.info("[CTest SETTINGS MAP AFTER OVERRIDE] " + this.defaultSamplingPolicySettings);
+
         loadDefaultPolicySettings();
+    }
+
+    public void overrideSamplingPolicySettings(SamplingPolicySettings overrides) {
+        if (overrides.getDefaultPolicy().getDuration() != null && overrides.getDefaultPolicy().getDuration() != -1) {
+            this.defaultSamplingPolicySettings.getDefaultPolicy().setDuration(overrides.getDefaultPolicy().getDuration());
+        }
+        if (overrides.getDefaultPolicy().getRate() != null && overrides.getDefaultPolicy().getRate() != 10000) {
+            this.defaultSamplingPolicySettings.getDefaultPolicy().setRate(overrides.getDefaultPolicy().getRate());
+        }
+        overrides.getServices().forEach((k, v) -> {
+            if (overrides.get(k).getDuration() != null) {
+                this.defaultSamplingPolicySettings.get(k).setDuration(overrides.get(k).getDuration());
+            }
+            if (overrides.get(k).getRate() != null) {
+                this.defaultSamplingPolicySettings.get(k).setRate(overrides.get(k).getRate());
+            }
+        });
     }
 
     @Override

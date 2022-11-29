@@ -23,10 +23,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.ServiceLoader;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The <code>ModuleManager</code> takes charge of all {@link ModuleDefine}s in collector.
  */
+@Slf4j
 public class ModuleManager implements ModuleDefineHolder {
     private boolean isInPrepareStage = true;
     private final Map<String, ModuleDefine> loadedModules = new HashMap<>();
@@ -69,6 +71,7 @@ public class ModuleManager implements ModuleDefineHolder {
     @Override
     public ModuleProviderHolder find(String moduleName) throws ModuleNotFoundRuntimeException {
         assertPreparedStage();
+        log.error("ModuleProviderHolder find {}", loadedModules.get(moduleName));
         ModuleDefine module = loadedModules.get(moduleName);
         if (module != null)
             return module;

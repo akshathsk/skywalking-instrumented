@@ -1,0 +1,3 @@
+configuration:
+  zookeeper:
+    namespace: /valid/file2

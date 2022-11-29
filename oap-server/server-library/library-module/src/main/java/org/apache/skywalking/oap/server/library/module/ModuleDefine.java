@@ -20,14 +20,16 @@ package org.apache.skywalking.oap.server.library.module;
 
 import java.lang.reflect.Field;
 import java.util.Enumeration;
-import java.util.Properties;
+import lombok.extern.slf4j.Slf4j;
 import java.util.ServiceLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import static org.apache.skywalking.oap.server.library.module.ApplicationConfiguration.PropertiesWrapper;
 
 /**
  * A module definition.
  */
+@Slf4j
 public abstract class ModuleDefine implements ModuleProviderHolder {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ModuleDefine.class);
@@ -88,6 +90,8 @@ public abstract class ModuleDefine implements ModuleProviderHolder {
 
         LOGGER.info("Prepare the {} provider in {} module.", loadedProvider.name(), this.name());
         try {
+            log.info("copyProperties" + loadedProvider.createConfigBeanIfAbsent() + " " + configuration.getProviderConfiguration(loadedProvider
+                    .name()) + " " + this.name() + " " + loadedProvider.name());
             copyProperties(loadedProvider.createConfigBeanIfAbsent(), configuration.getProviderConfiguration(loadedProvider
                 .name()), this.name(), loadedProvider.name());
         } catch (IllegalAccessException e) {
@@ -96,7 +100,7 @@ public abstract class ModuleDefine implements ModuleProviderHolder {
         loadedProvider.prepare();
     }
 
-    private void copyProperties(ModuleConfig dest, Properties src, String moduleName,
+    private void copyProperties(ModuleConfig dest, PropertiesWrapper src, String moduleName,
         String providerName) throws IllegalAccessException {
         if (dest == null) {
             return;
@@ -131,6 +135,7 @@ public abstract class ModuleDefine implements ModuleProviderHolder {
 
     @Override
     public final ModuleProvider provider() throws DuplicateProviderException, ProviderNotFoundException {
+        log.info("ModuleProvider provider {}", loadedProvider);
         if (loadedProvider == null) {
             throw new ProviderNotFoundException("There is no module provider in " + this.name() + " module!");
         }

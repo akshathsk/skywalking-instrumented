@@ -1,0 +1,7 @@
+org/apache/skywalking/oap/server/configuration/nacos/ITNacosConfigurationTest.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestProvider.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestProvider$1.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestModule.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestProvider$3.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigurationTestProvider$2.class
+org/apache/skywalking/oap/server/configuration/nacos/NacosConfigWatcherRegisterTest.class
